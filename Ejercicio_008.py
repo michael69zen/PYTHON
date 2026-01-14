@@ -18,3 +18,14 @@ def primos_hasta(numero):
 primates = primos_hasta(98)
 print(primates)
         
+def es_primo2(n):
+    # Un número primo debe ser mayor que 1
+    if n <= 1:
+        return False
+
+    # Probamos divisores hasta la raíz cuadrada de n
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:   # Si divide exacto
+            return False
+
+    return True
